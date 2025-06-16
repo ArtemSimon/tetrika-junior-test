@@ -11,7 +11,7 @@ def is_russian_letter(letter:str) -> bool:
 """ В данном случае использование defaultdict будет разумнее, чем тот же dict так как 
 если ключа не существует то тут автоматически он создается и присваевает значение int(0) """
 
-async def get_animals_wikipedia_count():
+async def get_animals_wikipedia_count() -> defaultdict:
     animal_count = defaultdict(int) # используем данную коллекцию для подсчета количества животных каждой буквы
     url = "https://ru.wikipedia.org/w/api.php"
     params = {
@@ -41,7 +41,7 @@ async def get_animals_wikipedia_count():
     return animal_count
 
 # для ассинхронной записи в файл
-async def save_data_to_file(data, file_path):
+async def save_data_to_file(data:defaultdict, file_path:str):
     async with aiofiles.open(file_path,'w') as file:
         for letter_upper,count in sorted(data.items()):
             await file.write(f'{letter_upper},{count}\n')
