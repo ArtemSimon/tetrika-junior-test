@@ -1,7 +1,7 @@
 # Тестовое задание 
 
 # Структура проекта
-
+```
 TETRIKA-JUNIOR-TEST/
 ├── task1/
 │ ├── tests/
@@ -26,7 +26,7 @@ TETRIKA-JUNIOR-TEST/
 │ ├── README.md
 │ └── solution.py
 ├── .gitignore
-
+```
 
 
 # Установка всего репозитория
@@ -66,7 +66,7 @@ pytest task1/tests/test.py/
 - Ассинхронная запись данных в файл (aiofiles)
 - Проверка русских букв
 - Использование defaultdict для подсчета животных
-- 
+
 ## Библиотеки
 
 - HTTPX (асинхронные HTTP-запросы)
